@@ -29,13 +29,25 @@
 
 | Feature | 설명 |
 |:--|:--|
-| Hours_Studied | 주간 학습 시간 |
-| Attendance | 출석률 |
-| Sleep_Hours | 평균 수면 시간 |
-| Physical_Activity | 주당 체육 활동 시간 |
+| Hours_Studied | 주당 학습 시간 |
+| Attendance | 수업 출석률 |
+| Parental_Involvement | 학생 교육에 대한 부모의 참여 수준 |
+| Access_to_Resources | 교육 자원의 가용성 |
+| Extracurricular_Activities | 교외 활동 참여 |
+| Sleep_Hours | 밤 평균 수면 시간 |
 | Previous_Scores | 이전 시험 점수 |
 | Motivation_Level | 동기 수준 (낮음/중간/높음) |
+| Internet_Access | 인터넷의 접근 가능성 |
+| Tutoring_Sessions | 한 달동안 참석한 과외 세션 수 |
 | Family_Income | 가정의 소득 수준 |
+| Teacher_Quality | 교사의 질 |
+| School_Type | 다니는 학교 유형 |
+| Peer_Influence | 또래의 학업 성과에 대한 영향 |
+| Physical_Activity | 주당 체육 활동 평균 시간 |
+| Learning_Disabilities | 학습 장애의 존재 |
+| Parental_Education_Level | 부모의 최고 교육 수준 |
+| Distance_from_Home | 집에서 학교까지의 거리 |
+| Gender | 학생의 성별 |
 | Exam_Score | 최종 시험 점수 (타깃 변수) |
 
 ---
@@ -47,12 +59,11 @@
    - `LabelEncoder` 대신 `map()`을 사용해 수동 인코딩 (예: Low=0, Medium=1, High=2)  
    - 순위가 존재하는 변수의 의미를 유지  
 3. **이상치(outlier) 확인:**  
-   - `d적  
-- **MSE:** 5.81  
-- **R²:** 0.59  
-  독립변수를 함께 고려했을 때 모델의 설명력이 매우 향상됨
-
+   - 특별한 이상치는 별견되지 않음  
 ---
+
+### Linear Regrssion 적용
+
 
 ### Random Forest 적용 및 튜닝
 - 기본 모델과 Grid Search로 하이퍼파라미터 최적화 시도  
