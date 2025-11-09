@@ -63,19 +63,37 @@
 ---
 
 ### Linear Regrssion 적용
-
-
+- Sleep_Hours → Exam_Scores
+  - MSE: 14.2
+  - R²: -0.001
+  - 상관관계가 없음 
+- Physical_Activity → Exam_Scores
+  - MSE: 14.2
+  - R²: -0.002
+  - 상관관계가 없음
+- Hours_Studied → Exam_Scores
+  - MSE: 10.86
+  - R²: 0.23
+  - 앞선 두 피쳐보다는 상관관계를 보임
+- Attendance → Exam_Scores
+  - MSE: 9.22
+  - R²: 0.35
+  - 가장 높은 상관관계를 보임
+- Attendance, Hours_Studied → Exam_Scores
+  - MSE: 5.81
+  - R²: 0.59
+  - 변수를 동시에 고려했더니 더 높은 상관관계를 가지는 것을 확인
 ### Random Forest 적용 및 튜닝
 - 기본 모델과 Grid Search로 하이퍼파라미터 최적화 시도  
-- R² 변화: -0.017 → -0.015  
-  비선형 모델에서도 유의미한 개선은 확인되지 않음
+- R² 변화: -0.017 → -0.015
+- 비선형 모델에서도 유의미한 개선은 확인되지 않음
 
 ---
 
 ### Feature Selection (Sequential Feature Selector)
 - 상관계수 0.1 이상인 피처 7개 중 3개 자동 선택  
-- 선택된 3개 피처로 모델 학습 시 성능 약간 하락  
-  선형모델에서는 더 많은 변수를 사용하는 것이 설명력 향상에 기여
+- 선택된 3개 피처로 모델 학습 시 성능 약간 하락
+- 선형모델에서는 더 많은 변수를 사용하는 것이 설명력 향상에 기여
 
 ---
 
@@ -86,7 +104,7 @@
 | Sleep Hours | 14.2 | -0.001 | 영향 없음 |
 | Physical Activity | 14.2 | -0.002 | 영향 없음 |
 | Attendance | 9.22 | 0.35 | 중간 정도의 양의 상관관계 |
-| Hours Studied | 10.46 | 0.23 | 약한 양의 상관관계 |
+| Hours Studied | 10.86 | 0.23 | 약한 양의 상관관계 |
 | Attendance + Hours Studied | 5.81 | 0.59 | 강한 관계 |
 | Random Forest (최적화 후) | 14.3 | -0.015 | 비선형에서도 영향 미미 |
 
