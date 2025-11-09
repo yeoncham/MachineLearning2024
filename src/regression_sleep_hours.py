@@ -4,6 +4,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error, r2_score
 import matplotlib.pyplot as plt
 
+df = pd.read_csv('StudentPerformanceFactors.csv')
 
 X = df[['Sleep_Hours']]
 y = df['Exam_Score']
